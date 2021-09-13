@@ -1,3 +1,6 @@
+this is supposed to result in a REACTJS webapp that can stream videos at the end of the day. whether it is fully able to do so...hahaha...
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
