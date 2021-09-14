@@ -16,18 +16,16 @@ class InfoCard extends Component {
         this.setState({ selectedinfo: information});
     }
 
-
     render() {
-        return (
-            <Card>
-                <CardImg top src = {information.image} alt = {information.name} />
+        return(
+            <Card style = {{maxWidth: '22rem'}}>
+                <CardImg variant = "top" src = "pictures/orange.jpg" />
                 <CardBody>
-                    <CardTitle>{information.name}</CardTitle>
-                    <CardText>{information.description}</CardText>
+                    <CardTitle as = "h5">orange hehe</CardTitle>
+                    <CardText as = "h3">annoying</CardText>
                 </CardBody>
             </Card>
         );
     }
 }
-
 export default InfoCard
