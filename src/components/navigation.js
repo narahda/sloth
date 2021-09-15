@@ -23,7 +23,7 @@ const Navi = (props) => {
 
     return (
         <div className= "boutme">
-          <Navbar color = "dark" variant = "dark">
+          <Navbar color = "dark" variant = "dark ">
             <div className = "container">
               <NavbarBrand href = "https://www.linkedin.com/in/narahda-lim-3b22891a4/"> About Me hehe</NavbarBrand>
               <UncontrolledDropdown nav inNavbar>

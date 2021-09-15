@@ -18,7 +18,7 @@ class InfoCard extends Component {
 
     render() {
 
-        const infoboard = this.props.information.map((info) => {
+        const infoboard = information.map((info) => {
             return (
                 <Card style = {{maxWidth: '22rem'}}>
                     <Card key = {info.id}>
@@ -26,7 +26,7 @@ class InfoCard extends Component {
                         <CardBody >
                             <CardTitle>{info.name}</CardTitle>
                             <CardText>{info.description}</CardText>
-                            <Button variant = "outline-danger" href = {info.url} >go to youtube</Button>
+                            <Button variant = "outline-danger" href = {info.url} >{info.timetravel}</Button>
                         </CardBody>
                     </Card>
                 </Card>
@@ -40,7 +40,7 @@ class InfoCard extends Component {
                     {infoboard}
                 </div>
             </div>
-        )
+        );
     }
 
 }
