@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Media } from 'reactstrap';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
-import { information } from './info';
+import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle, Button } from 'reactstrap';
+import {information} from './info.js'
 
 
 class InfoCard extends Component {
@@ -12,20 +12,36 @@ class InfoCard extends Component {
             selectedinfo: null
         }
     }
-    onInfoSelect(information) {
-        this.setState({ selectedinfo: information});
+    onInfoSelect(info) {
+        this.setState({ selectedinfo: info});
     }
 
     render() {
-        return(
-            <Card style = {{maxWidth: '22rem'}}>
-                <CardImg variant = "top" src = "pictures/orange.jpg" />
-                <CardBody>
-                    <CardTitle as = "h5">orange hehe</CardTitle>
-                    <CardText as = "h3">annoying</CardText>
-                </CardBody>
-            </Card>
-        );
+
+        const infoboard = this.props.information.map((info) => {
+            return (
+                <Card style = {{maxWidth: '22rem'}}>
+                    <Card key = {info.id}>
+                        <CardImg variant = "top" src = {info.image} />
+                        <CardBody >
+                            <CardTitle>{info.name}</CardTitle>
+                            <CardText>{info.description}</CardText>
+                            <Button variant = "outline-danger" href = {info.url} >go to youtube</Button>
+                        </CardBody>
+                    </Card>
+                </Card>
+            );
+        });
+
+
+        return (
+            <div className = "container">
+                <div className = "row">
+                    {infoboard}
+                </div>
+            </div>
+        )
     }
+
 }
 export default InfoCard
