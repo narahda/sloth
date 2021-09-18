@@ -36,7 +36,7 @@ class InfoCard extends Component {
 
         return (
             <div className = "container">
-                <div className = "row">
+                <div className = "row" xs = {1} md = {2}>
                     {infoboard}
                 </div>
             </div>
